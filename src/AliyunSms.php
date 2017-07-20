@@ -16,7 +16,7 @@ use hegzh\AliyunSms\Request\V20170525\QuerySendDetailsRequest;
 use hegzh\AliyunCore\Exception\ClientException;
 use hegzh\AliyunCore\Exception\ServerException;
 
-class SmsDy
+class AliyunSms
 {
     private $product = "Dysmsapi";//短信API产品名
     private $domain = "dysmsapi.aliyuncs.com";//短信API产品域名
