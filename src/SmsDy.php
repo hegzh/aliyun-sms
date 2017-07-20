@@ -1,6 +1,6 @@
 <?php
 
-namespace hegzh\AliyunSms\Sms;
+namespace hegzh\AliyunSms;
 
 /**
  * 短信发送
@@ -11,8 +11,8 @@ namespace hegzh\AliyunSms\Sms;
  */
 use hegzh\AliyunCore\Profile\DefaultProfile;
 use hegzh\AliyunCore\DefaultAcsClient;
-use hegzh\AliyunSms\Sms\Request\V20170525\SendSmsRequest;
-use hegzh\AliyunSms\Sms\Request\V20170525\QuerySendDetailsRequest;
+use hegzh\AliyunSms\Request\V20170525\SendSmsRequest;
+use hegzh\AliyunSms\Request\V20170525\QuerySendDetailsRequest;
 use hegzh\AliyunCore\Exception\ClientException;
 use hegzh\AliyunCore\Exception\ServerException;
 

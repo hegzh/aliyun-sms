@@ -18,7 +18,7 @@
  * under the License.
  */
  
-namespace hegzh\AliyunSms\Sms\Request\V20170525;
+namespace hegzh\AliyunSms\Request\V20170525;
 use hegzh\AliyunCore\RpcAcsRequest;
 
  

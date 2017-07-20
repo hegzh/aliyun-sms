@@ -17,7 +17,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace hegzh\AliyunSms\Sms\Request\V20170525;
+namespace hegzh\AliyunSms\Request\V20170525;
 use hegzh\AliyunCore\RpcAcsRequest;
 
 class QuerySendDetailsRequest extends RpcAcsRequest
