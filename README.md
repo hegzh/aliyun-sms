@@ -19,10 +19,9 @@ $config['alidayu'] = [
 
 ## Examples
 
-´´´
+```
 <?php
 use hegzh\AliyunSms\AliyunSms;
-
 
 $mobile = "13800138000"; //国内手机号码
 $templateCode = "SMS_75990000"; //短信模板 阿里云上申请
@@ -33,10 +32,8 @@ $sms = new AliyunSms();
 //发送短信
 $res = $sms->sendSms($mobile, $templateCode, $templateParm, $smsId);
 
-
 //查询短信记录
 $date = "20170720";
 $res = $sms->getSendDetails($mobile, $date);
 ?>
-
-´´´
+```
