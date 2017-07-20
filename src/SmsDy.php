@@ -44,7 +44,6 @@ class SmsDy
     public function sendSms($mobile, $templateCode, $templateParm = [], $smsId = 0)
     {
         $smsId = empty($smsId) ? mt_rand(100000, 999999) : (int)$smsId;
-
         //初始化访问的acsCleint
         $profile = DefaultProfile::getProfile($this->region, $this->accessKeyId, $this->accessKeySecret);
         DefaultProfile::addEndpoint($this->region, $this->region, $this->product, $this->domain);
@@ -58,15 +57,25 @@ class SmsDy
         $request->setOutId($smsId);//选填-发送短信流水号
 
         //发起访问请求
+        $return = ['state' => true];
         try {
             $acsResponse = $acsClient->getAcsResponse($request);
-            return $acsResponse;
+            if ($acsResponse->Code != 'OK') {
+                $return['state'] = false;
+                $return['code'] = $acsResponse->Code;
+                $return['error'] = $acsResponse->Message;
+            }
         } catch (ClientException  $e) {
-            var_dump($e->getErrorCode(), $e->getErrorMessage());
+            $return['state'] = false;
+            $return['code'] = $e->getErrorCode();
+            $return['error'] = $e->getErrorMessage();
         } catch (ServerException  $e) {
-            var_dump($e->getErrorCode(), $e->getErrorMessage());
+            $return['state'] = false;
+            $return['code'] = $e->getErrorCode();
+            $return['error'] = $e->getErrorMessage();
         }
 
+        return $return;
     }
 
     /**
