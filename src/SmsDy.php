@@ -60,7 +60,7 @@ class SmsDy
         //发起访问请求
         try {
             $acsResponse = $acsClient->getAcsResponse($request);
-            var_dump($acsResponse);
+            return $acsResponse;
         } catch (ClientException  $e) {
             var_dump($e->getErrorCode(), $e->getErrorMessage());
         } catch (ServerException  $e) {
@@ -97,7 +97,7 @@ class SmsDy
 
         //发起访问请求
         $acsResponse = $acsClient->getAcsResponse($request);
-        var_dump($acsResponse);
+        return $acsResponse;
     }
 
 }
