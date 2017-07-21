@@ -1,22 +1,29 @@
 {
-    "name": "hegzh/aliyun-sms",
-    "description": "阿里大于短信服务PHP SDK的composer封装",
-    "keywords": ["aliyun", "aliyun-sms", "sdk", "sms"],
-    "require": {
-        "php": ">5.3",
-        "hegzh/aliyun-core": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "hegzh\\AliyunSms\\": "src/"
-        }
-    },
-    "license": "MIT",
-    "minimum-stability" : "dev",
-    "authors": [
-        {
-            "name": "Gilbert.Ho",
-            "email": "495047737@qq.com"
-        }
-    ]
+  "name": "hegzh/aliyun-sms",
+  "description": "阿里大于短信服务PHP SDK的composer封装",
+  "keywords": [
+    "aliyun",
+    "aliyun-sms",
+    "sdk",
+    "sms",
+    "thinkphp5",
+    "TP5"
+  ],
+  "require": {
+    "php": ">5.3",
+    "hegzh/aliyun-core": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "hegzh\\AliyunSms\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Gilbert.Ho",
+      "email": "495047737@qq.com"
+    }
+  ]
 }
